@@ -1,64 +1,50 @@
-<p align="center">
-  <img src="./docs/screenshot.png" width="400px" />
-</p>
 
-<h1 align="center">nOS</h1>
-<p align="center">
-  <strong>nOS</strong> is a NEO-powered virtual operating system that serves as the gateway to the NEO Smart Economy.
-</p>
-<p align="center">
-  The <strong>nOS Client</strong> (Developer MVP Release) allows for the development of Decentralized Applications that interact with NEO Smart Contracts in the back-end.
-</p>
+# Setup
 
----
+## Establishing connection
+<p>In order to use this application, you must first establish a connection to SDU's network so you can access our blockchain</p>
+<p>You can establish a connection to SDU's network through the following steps:<p/>
+<ul>
+  <li>Download Cisco Anyconnect from https://any.sdu.dk</li>
+  <li>Login with SDU username & password</li>
+  <li>You are done!</li>
+</ul>
+  
+## Launching the client
 
-# Getting Started with nOS
-
-The app can be cloned from GitHub and run using the development steps below.
-
-## nOS Client Developer Documentation
-
-- [API Documentation](./docs/api.md)
-- [Create your own dApp](./docs/create-your-own-dapp.md)
-- [Setup nos-local](./docs/nos-local.md)
-
-
-### Commands
 ```
 // Install dependencies and launch the nOS client
-// This is used to start developing on the nOS client
-yarn install && yarn start
+$ yarn install && yarn start
 
-// Testing command
-yarn test
+// When client has started, go to the WIF tab and login with the following WIF key:
+KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr
 
-// Distribution command
-yarn dist
 ```
 
 
-# Contribute to this repository
+## Optional
+<p>If you don't want to use our current wallet, you can also create your own through the neo-python CLI</p>
+<p>If you are running a Windows machine you will have to download putty to establish connection</p>
+```
+// Establish connection to the server
 
-We welcome contributions to the code base. If you are interested in becoming a contributor, please read the [contributing guide](/.github/CONTRIBUTING.md) that covers the following:
+$ ssh Jope015@10.123.3.28
 
-- [Reporting bugs](/.github/CONTRIBUTING.md#reporting-bugs)
-- [Suggesting enchancements](/.github/CONTRIBUTING.md#Suggesting-Enhancements)
-- [Code contribution guidelines](/.github/CONTRIBUTING.md#Code-Contribution)
+// It will ask for password, below is written the password
+7@M6+V8weD5!DE
+
+// Start the neo-python CLI
+$ cd /neo-python
+$ source venv/bin/activate
+$ np-prompt -p
 
 
-There is a [specific channel called develop](https://discord.nos.io/) on Discord to discuss development.
+// Create wallet
+$ create wallet %name%
+
+//The CLI will print out the public key of you wallet, use this to export the WIF key used to login to the client
+$ export wif %publickey%
 
 
-# Contribute by building a dApp on nOS
 
-**Check out the documentation of the dapp-starter-kit [dApp-starter-kit](./docs/create-your-own-dapp.md) to get going quickly.**
-
-Resources: 
-
-- [dApp-starter-kit repository](https://github.com/nos/dapp-starter-kit)
-- [dApp-starter-kit example (NeoBlog implementation)](https://github.com/nos/dapp-neoblog)
-
-Future resources:
-- Tutorials (Feel free to create any tutorials!!)
-- List of known bugs
-- List of coming features
+```
