@@ -25,6 +25,7 @@ KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr
 ## Optional
 <p>If you don't want to use our current wallet, you can also create your own through the neo-python CLI</p>
 <p>If you are running a Windows machine you will have to download putty to establish connection</p>
+
 ```
 // Establish connection to the server
 
