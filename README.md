@@ -29,10 +29,10 @@ KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr
 ```
 // Establish connection to the server
 
-$ ssh Jope015@10.123.3.28
+$ ssh username@ip
 
 // It will ask for password, below is written the password
-7@M6+V8weD5!DE
+$ password
 
 // Start the neo-python CLI
 $ cd /neo-python
